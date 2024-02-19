@@ -1,0 +1,22 @@
+[회원가입]
+- 아이디
+- 비밀번호
+- 전화번호
+- 이메일
+- 생년월일
+- 성별
+
+[로그인]
+- 아이디
+- 비밀번호
+
+### User Tabel
+- user_idx(PK) : int : A.I로 ID  값을 자동 생성
+- username : varchar(255) : 사용자 아이디
+- password : varchar(255) : 사용자 비밀번호
+- email : varchar(255) : 사용자 이메일
+- phone_number : char(255) : 사용자 전화번호
+- gender : enum("man", "woman") : 성별
+- is_admin : boolean : 관리자인가?
+
+### P
