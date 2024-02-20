@@ -16,7 +16,13 @@ switch ($resource[1]) {
     case 'login':
         $page = "./pages/" . $resource[1] . ".php";
         break;
-    case '/register':
+    case 'register':
+        $page = "./pages/" . $resource[1] . ".php";
+        break;
+    case 'postpage':
+        $page = "./pages/" . $resource[1] . ".php";
+        break;
+    case 'newpost':
         $page = "./pages/" . $resource[1] . ".php";
         break;
     default:
