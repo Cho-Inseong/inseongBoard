@@ -1,4 +1,4 @@
 <?php
-# 세션을 종료 시키거나 세션에 있는 user_idx를 삭제
-
+session_destroy();
+header("Location: /");
 ?>
