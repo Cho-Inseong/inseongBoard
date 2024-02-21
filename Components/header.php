@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="../css/header.css">
 <header>
     <div id="left">
-        <span id="headerTitle">투슬리스</span>
+        <a href="/">
+            <span id="headerTitle">투슬리스 보드</span>
+        </a>
     </div>
     <div id="right">
         <ul>

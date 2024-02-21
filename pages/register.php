@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $phone_naumber = $_POST['phone_naumber'];
   $gender = $_POST['gender'];
 
+  
   try{
     $sql = "INSERT INTO users (username, password, email, phone_number, gender) VALUES (?, ?, ?, ?, ?)";
     $stmt = $pdo->prepare($sql);
