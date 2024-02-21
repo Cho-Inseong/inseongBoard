@@ -1,29 +1,39 @@
 <?php
-	$host = "localhost";
-	$user = "root";
-	$pass = "";
-	$db = "inseong";
-
-	$conn = new mysqli($host, $user, $pass, $db);
-
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 
-		$sql = "SELECT user_idx FROM users WHERE username = '$username' and password = '$password'";
-		$result = $conn->query($sql);
+		$sql = "SELECT user_idx, password FROM users WHERE username = :username ";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(":username", $username);
 
-		if ($result->num_rows > 0) {
-      $row = $result->fetch_assoc();
-      $userIDX = $row['user_idx'];
+    $stmt->execute();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-			session_start();
-			$_SESSION["user_idx"] = $userIDX;
-      echo $_SESSION["user_idx"];
-			header("location: /");
-		} else {
-			echo('<script>"아이디 또는 비밀번호가 잘못되었습니다."</script>');
-		}
+    if ($user && ($password == $user['password'])) {
+      $_SESSION["user_idx"] = $user["user_idx"];
+      header("Location: /");
+      exit;
+    } else {
+      echo "아이디 또는 비밀번호가 잘못되었습니다.";
+    }
+
+    
+
+    // echo $result["password"];
+    
+		// $result = $conn->query($sql);
+		// if ($result->num_rows > 0) {
+    //   $row = $result->fetch_assoc();
+    //   $userIDX = $row['user_idx'];
+
+		// 	session_start();
+		// 	$_SESSION["user_idx"] = $userIDX;
+    //   echo $_SESSION["user_idx"];
+		// 	header("location: /");
+		// } else {
+		// 	echo('<script>"아이디 또는 비밀번호가 잘못되었습니다."</script>');
+		// }
 	}
 ?>
 <!DOCTYPE html>
