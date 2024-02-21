@@ -16,80 +16,67 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 ?>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <style>
-      body {
-        background-color: aqua;
-      }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1></h1>
-        <form action="" method="post">
-            <div class="row mb-3">
-              <label for="inputEmail3" class="col-sm-2 col-form-label">아이디</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputEmail3" name="username">
-              </div>
+<style>
+  body {
+    background-color: aqua;
+  }
+</style>
+
+<div class="container">
+    <h1></h1>
+    <form action="" method="post">
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">아이디</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputEmail3" name="username">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">비밀번호</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" name="password">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">이메일</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputPassword3" name="email">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">전화번호</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="inputPassword3" name="phone_naumber">
+          </div>
+        </div>
+        <fieldset class="row mb-3">
+          <legend class="col-form-label col-sm-2 pt-0">성별</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="gridRadios1" value="man" name="gender">
+              <label class="form-check-label" for="gridRadios1">
+                남성
+              </label>
             </div>
-            <div class="row mb-3">
-              <label for="inputPassword3" class="col-sm-2 col-form-label">비밀번호</label>
-              <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword3" name="password">
-              </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="gridRadios2" value="woman" name="gender">
+              <label class="form-check-label" for="gridRadios2">
+                여성
+              </label>
             </div>
-            <div class="row mb-3">
-              <label for="inputPassword3" class="col-sm-2 col-form-label">이메일</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputPassword3" name="email">
-              </div>
-            </div>
-            <div class="row mb-3">
-              <label for="inputPassword3" class="col-sm-2 col-form-label">전화번호</label>
-              <div class="col-sm-10">
-                <input type="number" class="form-control" id="inputPassword3" name="phone_naumber">
-              </div>
-            </div>
-            <fieldset class="row mb-3">
-              <legend class="col-form-label col-sm-2 pt-0">성별</legend>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" id="gridRadios1" value="man" name="gender">
-                  <label class="form-check-label" for="gridRadios1">
-                    남성
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" id="gridRadios2" value="woman" name="gender">
-                  <label class="form-check-label" for="gridRadios2">
-                    여성
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-            <div class="row mb-3">
-              <div class="col-sm-10 offset-sm-2">
-                <!-- <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck1">
-                  <label class="form-check-label" for="gridCheck1">
-                    Example checkbox
-                  </label>
-                </div> -->
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary"> 회원가입</button>
-            <button type="button" class="btn btn-primary"><a href="login">로그인</a></button>
-          </form>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-</body>
-</html>
+          </div>
+        </fieldset>
+        <div class="row mb-3">
+          <div class="col-sm-10 offset-sm-2">
+            <!-- <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck1">
+              <label class="form-check-label" for="gridCheck1">
+                Example checkbox
+              </label>
+            </div> -->
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary"> 회원가입</button>
+        <button type="button" class="btn btn-primary"><a href="login">로그인</a></button>
+      </form>
+</div>

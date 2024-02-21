@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateRainbowText() {
         rainbowText.innerHTML = ""; // 기존 텍스트를 비웁니다.
         var colors = ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#9400D3']; // 무지개 색상
-        for (var i = 0; i < text.length; i++) {
-            var charElem = document.createElement('span');
+        for (let i = 0; i < text.length; i++) {
+            let charElem = document.createElement('span');
             charElem.style.color = colors[(i + colorShift) % colors.length];
             charElem.textContent = text[i];
             rainbowText.appendChild(charElem);
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         colorShift = (colorShift + 1) % colors.length; // 색상 이동
     }
 
-    var colorShift = 0;
+    let colorShift = 0;
     updateRainbowText(); // 초기 무지개 텍스트 설정
     setInterval(updateRainbowText, 100); // 1000ms(1초)마다 색상 변경
 });
