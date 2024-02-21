@@ -1,0 +1,14 @@
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+    float: left;
+    padding: 5px 10px;
+}
+
+#left, #right {
+    width: 50%;
+}
