@@ -2,8 +2,9 @@
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$username = $_POST["username"];
 		$password = $_POST["password"];
+    $admin = $_post["is_admin"];
 
-		$sql = "SELECT user_idx, password FROM users WHERE username = :username ";
+		$sql = "SELECT user_idx, password, is_admin FROM users WHERE username = :username ";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(":username", $username);
 
@@ -12,6 +13,7 @@
 
     if ($user && ($password == $user['password'])) {
       $_SESSION["user_idx"] = $user["user_idx"];
+      $_SESSION["is_admin"] = $user["is_admin"];
       header("Location: /");
       exit;
     } else {

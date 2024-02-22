@@ -1,9 +1,11 @@
 <link rel="stylesheet" href="../css/header.css">
 <header>
     <div id="left">
-        <a href="/">
-            <span id="headerTitle">투슬리스 보드</span>
-        </a>
+            <div onclick="location.href='/'" style="cursor:pointer;">
+                <div>
+                    <span id="headerTitle">투슬리스 보드</span>
+                </div>
+            </div>
     </div>
     <div id="right">
         <ul>

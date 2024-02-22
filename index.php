@@ -42,6 +42,9 @@ echo "<script>console.log('path[1] = " . $path[1] . "');</script>";
         case 'logout':
             $page = "./pages/" . $resource[1] . ".php";
             break;
+        case 'admin':
+            $page = "./pages/" . $resource[1] . ".php";
+            break;
         default:
             $page = "./pages/404.php";
             break;
