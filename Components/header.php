@@ -12,8 +12,15 @@
             <?php
             if (isset($_SESSION["user_idx"])) {
                 echo "
+                <li><a href='postpage'>게시글</a></li>
+                <li><a href='newpost'>게시글 쓰기</a></li>
                 <li><a href='logout'>로그아웃</a></li>
                 ";
+                if ($_SESSION["is_admin"] == 1) {
+                    echo "
+                    <li><a href='admin'>관리자 페이지</a></li>
+                    ";
+                }
             }else {
                 echo "
                 <li><a href='login'>로그인</a></li>

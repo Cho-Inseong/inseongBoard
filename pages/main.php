@@ -1,7 +1,3 @@
-<?php
-echo $_SESSION["is_admin"];
-?>
-
 <style>
     body {
         width: 100%;
@@ -11,8 +7,4 @@ echo $_SESSION["is_admin"];
         background-repeat: no-repeat;
     }
 </style>
-
-<a href="postpage">게시글</a>
-<a href="admin">관리자페이지</a>
-
 
