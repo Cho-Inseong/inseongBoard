@@ -10,7 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(':post_idx', $_POST["post_idx"]);
     $stmt->execute();
 }
-
 ?>
 
 <div class="container mt-5">

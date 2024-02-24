@@ -2,7 +2,6 @@
 parse_str($path[1], $output);
 $post_idx =  $output["post_idx"];
 
-
 $sql = "SELECT title, content FROM posts WHERE post_idx = :post_idx";
 $stmt = $pdo->prepare($sql);
 $stmt->bindParam(":post_idx", $post_idx);
