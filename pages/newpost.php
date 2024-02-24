@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo "
       <script>
       alert('글 쓰기 완료')
-      location.href = '/';
+      location.href = 'postpage';
       </script>
       ";
     } catch (PDOException $e) {

@@ -7,7 +7,6 @@
 		$sql = "SELECT user_idx, password, is_admin FROM users WHERE username = :username ";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(":username", $username);
-
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -29,7 +28,7 @@
 
 <div class="container">
     <h1></h1>
-    <form action=" " method="post">
+    <form action="" method="post">
         <div class="row mb-3">
           <label for="inputEmail3" class="col-sm-2 col-form-label">아이디</label>
           <div class="col-sm-10">

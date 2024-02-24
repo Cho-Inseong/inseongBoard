@@ -61,7 +61,6 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
             $divinnertext .= "<p>" . $post["content"] . "</p>";
             $divinnertext .= "<button id='" . $post["post_idx"] . "' onclick='postdelete(this);'>삭제버튼</button>";
             $divinnertext .= "</div>";
-
             echo $divinnertext;
         }
     }
@@ -87,11 +86,8 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     alert("에큥 실패★")
                 }
             })
-            // alert("지웠다 이 시발롬아 이제 속 시원하니?")
-            // console.log("지울게용");
         } else {
-            alert("시발련아 왜 안지움?")
-            console.log("병신 쪼다 새끼 왜 지우다 마냐ㅋㅋ")
+            alert("삭제가 취소되었습니다.")
         }
         return console.log(elem)
     }
